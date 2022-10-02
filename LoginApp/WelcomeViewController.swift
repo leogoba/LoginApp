@@ -14,19 +14,18 @@ class WelcomeViewController: UIViewController {
     
     var username: String!
     
-    
+    var gradient: CAGradientLayer = {
+            let gradient = CAGradientLayer()
+            gradient.colors = [#colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1).cgColor, #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1).cgColor]
+            return gradient
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameLabel.text = "Welcome, \(username ?? "")!"
-        
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = gradientView.bounds
-        gradientLayer.colors = [#colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1).cgColor, #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1).cgColor]
-        gradientLayer.shouldRasterize = true
-        gradientView.layer.addSublayer(gradientLayer)
-    }
-    
-    override var shouldAutorotate: Bool {
-        return false
+
+        gradient.frame = gradientView.bounds
+        gradientView.layer.addSublayer(gradient)
     }
 }
+
