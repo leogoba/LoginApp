@@ -95,18 +95,47 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <segue destination="9bL-Qe-u0d" kind="unwind" unwindAction="unwindFor:" id="GLQ-kQ-KUY"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXi-Ad-xbN">
+                                <rect key="frame" x="161" y="159" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋🏻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXx-7L-v7o">
+                                <rect key="frame" x="179.66666666666666" y="205" width="34" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RSg-o4-fvZ">
+                                <rect key="frame" x="-100" y="-107" width="704" height="1094"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6lF-Gh-c8d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6lF-Gh-c8d" firstAttribute="bottom" secondItem="8pQ-Wf-fe1" secondAttribute="bottom" constant="100" id="AHi-As-vrc"/>
+                            <constraint firstItem="hXx-7L-v7o" firstAttribute="top" secondItem="tXi-Ad-xbN" secondAttribute="bottom" constant="10" id="AQY-46-Khp"/>
+                            <constraint firstItem="tXi-Ad-xbN" firstAttribute="top" secondItem="6lF-Gh-c8d" secondAttribute="top" constant="100" id="DVB-TD-U6z"/>
+                            <constraint firstItem="hXx-7L-v7o" firstAttribute="centerX" secondItem="Y5r-z7-iQa" secondAttribute="centerX" id="jYn-qu-qdZ"/>
                             <constraint firstItem="8pQ-Wf-fe1" firstAttribute="centerX" secondItem="Y5r-z7-iQa" secondAttribute="centerX" id="mrG-1e-tL1"/>
+                            <constraint firstItem="tXi-Ad-xbN" firstAttribute="centerX" secondItem="Y5r-z7-iQa" secondAttribute="centerX" id="v3n-Ep-17x"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FtY-ZG-RZS"/>
+                    <connections>
+                        <outlet property="gradientView" destination="RSg-o4-fvZ" id="PHD-dh-0VQ"/>
+                        <outlet property="userNameLabel" destination="tXi-Ad-xbN" id="xX5-9P-mNN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pwm-0z-fnN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="9bL-Qe-u0d" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="925.95419847328242" y="-2.1126760563380285"/>
         </scene>
@@ -114,6 +143,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -13,16 +13,27 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.username = userNameTF.text
         if userNameTF.text != "User" || passwordTF.text != "Password" {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please enter correct login or password"
             )
+            passwordTF.text = ""
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        userNameTF.text = ""
+        passwordTF.text = ""
     }
     
     @IBAction func forgotUserNameButton() {
@@ -39,14 +50,11 @@ class LoginViewController: UIViewController {
         )
     }
     
-    
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
     }
-
-    
 }
 
