@@ -25,6 +25,21 @@ class LoginViewController: UIViewController {
         }
     }
     
+    @IBAction func forgotUserNameButton() {
+        showAlert(
+            title: "Oops!",
+            message: "Your name is User😉"
+        )
+    }
+    
+    @IBAction func forgotPassword() {
+        showAlert(
+            title: "Oops!",
+            message: "Your password is Password😏"
+        )
+    }
+    
+    
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
