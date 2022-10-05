@@ -37,7 +37,8 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
-                                    <segue destination="m2T-5C-WKp" kind="presentation" modalPresentationStyle="fullScreen" id="T7q-Ax-kq3"/>
+                                    <action selector="buttonLoginTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="cpf-Ce-NPX"/>
+                                    <segue destination="m2T-5C-WKp" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="T7q-Ax-kq3"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NMk-sG-xWU">
@@ -95,10 +96,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RSg-o4-fvZ">
-                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                                <color key="backgroundColor" systemColor="systemGray4Color"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pQ-Wf-fe1">
                                 <rect key="frame" x="171.66666666666666" y="756" width="86.999999999999972" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -124,21 +121,16 @@
                         <viewLayoutGuide key="safeArea" id="6lF-Gh-c8d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="RSg-o4-fvZ" firstAttribute="top" secondItem="Y5r-z7-iQa" secondAttribute="top" id="3Go-R2-YHZ"/>
-                            <constraint firstAttribute="bottom" secondItem="RSg-o4-fvZ" secondAttribute="bottom" id="6ov-Yd-Qmt"/>
                             <constraint firstItem="6lF-Gh-c8d" firstAttribute="bottom" secondItem="8pQ-Wf-fe1" secondAttribute="bottom" constant="100" id="AHi-As-vrc"/>
                             <constraint firstItem="hXx-7L-v7o" firstAttribute="top" secondItem="tXi-Ad-xbN" secondAttribute="bottom" constant="10" id="AQY-46-Khp"/>
                             <constraint firstItem="tXi-Ad-xbN" firstAttribute="top" secondItem="6lF-Gh-c8d" secondAttribute="top" constant="100" id="DVB-TD-U6z"/>
-                            <constraint firstItem="RSg-o4-fvZ" firstAttribute="trailing" secondItem="6lF-Gh-c8d" secondAttribute="trailing" id="hDb-hR-V3R"/>
                             <constraint firstItem="hXx-7L-v7o" firstAttribute="centerX" secondItem="Y5r-z7-iQa" secondAttribute="centerX" id="jYn-qu-qdZ"/>
                             <constraint firstItem="8pQ-Wf-fe1" firstAttribute="centerX" secondItem="Y5r-z7-iQa" secondAttribute="centerX" id="mrG-1e-tL1"/>
-                            <constraint firstItem="RSg-o4-fvZ" firstAttribute="leading" secondItem="6lF-Gh-c8d" secondAttribute="leading" id="pVT-Iu-t0r"/>
                             <constraint firstItem="tXi-Ad-xbN" firstAttribute="centerX" secondItem="Y5r-z7-iQa" secondAttribute="centerX" id="v3n-Ep-17x"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FtY-ZG-RZS"/>
                     <connections>
-                        <outlet property="gradientView" destination="RSg-o4-fvZ" id="PHD-dh-0VQ"/>
                         <outlet property="userNameLabel" destination="tXi-Ad-xbN" id="xX5-9P-mNN"/>
                     </connections>
                 </viewController>
@@ -151,9 +143,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
