@@ -14,6 +14,7 @@
 		5237F80C28E8CA3B0053E7CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5237F80B28E8CA3B0053E7CA /* Assets.xcassets */; };
 		5237F80F28E8CA3B0053E7CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5237F80D28E8CA3B0053E7CA /* LaunchScreen.storyboard */; };
 		5237F81728E8CB550053E7CA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5237F81628E8CB550053E7CA /* WelcomeViewController.swift */; };
+		52F416F128EDEBA300E866B7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F416F028EDEBA300E866B7 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5237F80E28E8CA3B0053E7CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5237F81028E8CA3B0053E7CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5237F81628E8CB550053E7CA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		52F416F028EDEBA300E866B7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,49 @@
 		5237F80128E8CA390053E7CA /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
-				5237F80228E8CA390053E7CA /* AppDelegate.swift */,
-				5237F80428E8CA390053E7CA /* SceneDelegate.swift */,
-				5237F80628E8CA390053E7CA /* LoginViewController.swift */,
-				5237F81628E8CB550053E7CA /* WelcomeViewController.swift */,
-				5237F80828E8CA390053E7CA /* Main.storyboard */,
+				52F416EC28EDEAAE00E866B7 /* App */,
+				52F416ED28EDEAE700E866B7 /* ViewControllers */,
+				52F416EF28EDEB8A00E866B7 /* User */,
+				52F416EE28EDEAFA00E866B7 /* Storyboards */,
 				5237F80B28E8CA3B0053E7CA /* Assets.xcassets */,
-				5237F80D28E8CA3B0053E7CA /* LaunchScreen.storyboard */,
-				5237F81028E8CA3B0053E7CA /* Info.plist */,
 			);
 			path = LoginApp;
+			sourceTree = "<group>";
+		};
+		52F416EC28EDEAAE00E866B7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5237F80428E8CA390053E7CA /* SceneDelegate.swift */,
+				5237F80228E8CA390053E7CA /* AppDelegate.swift */,
+				5237F81028E8CA3B0053E7CA /* Info.plist */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		52F416ED28EDEAE700E866B7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5237F80628E8CA390053E7CA /* LoginViewController.swift */,
+				5237F81628E8CB550053E7CA /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		52F416EE28EDEAFA00E866B7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5237F80828E8CA390053E7CA /* Main.storyboard */,
+				5237F80D28E8CA3B0053E7CA /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		52F416EF28EDEB8A00E866B7 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				52F416F028EDEBA300E866B7 /* User.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +179,7 @@
 				5237F80728E8CA390053E7CA /* LoginViewController.swift in Sources */,
 				5237F81728E8CB550053E7CA /* WelcomeViewController.swift in Sources */,
 				5237F80328E8CA390053E7CA /* AppDelegate.swift in Sources */,
+				52F416F128EDEBA300E866B7 /* User.swift in Sources */,
 				5237F80528E8CA390053E7CA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
