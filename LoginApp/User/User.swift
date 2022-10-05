@@ -16,11 +16,11 @@ struct User {
 }
 
 struct Person {
-    let firstName: String
-    let lastName: String
+    let firstname: String
+    let secondname: String
     
     static func createPerson() -> Person {
-        Person(firstName: "Tim", lastName: "Cook")
+        Person(firstname: "Tim", secondname: "Cook")
     }
 }
 

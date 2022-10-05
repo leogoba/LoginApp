@@ -40,7 +40,7 @@
                                                 <state key="normal" title="Log In"/>
                                                 <connections>
                                                     <action selector="buttonLoginTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="cpf-Ce-NPX"/>
-                                                    <segue destination="m2T-5C-WKp" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="T7q-Ax-kq3"/>
+                                                    <segue destination="Nbe-cU-y7x" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="T7q-Ax-kq3"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -86,9 +86,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16.744186046511629" y="-2.5751072961373391"/>
+            <point key="canvasLocation" x="90" y="-573"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--Home-->
         <scene sceneID="PLT-8E-BHc">
             <objects>
                 <viewController id="m2T-5C-WKp" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -97,7 +97,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pQ-Wf-fe1">
-                                <rect key="frame" x="116.5" y="426" width="87" height="42"/>
+                                <rect key="frame" x="116.5" y="377" width="87" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log Out"/>
@@ -129,6 +129,7 @@
                             <constraint firstItem="tXi-Ad-xbN" firstAttribute="centerX" secondItem="Y5r-z7-iQa" secondAttribute="centerX" id="v3n-Ep-17x"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="iphone.homebutton.circle.fill" catalog="system" id="KdV-xl-CIG"/>
                     <navigationItem key="navigationItem" id="FtY-ZG-RZS"/>
                     <connections>
                         <outlet property="userNameLabel" destination="tXi-Ad-xbN" id="xX5-9P-mNN"/>
@@ -137,10 +138,87 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pwm-0z-fnN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="9bL-Qe-u0d" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="925.95419847328242" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="-649" y="987"/>
+        </scene>
+        <!--User DataVC-->
+        <scene sceneID="lhb-Xp-4y8">
+            <objects>
+                <viewController id="32v-5z-a7n" customClass="UserDataVC" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3o7-A4-Hdl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Bfz-qC-GgB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ha1-iN-2gy">
+                        <barButtonItem key="rightBarButtonItem" title="Bio" id="3U5-02-wNe">
+                            <connections>
+                                <segue destination="ndB-ZB-KMX" kind="show" id="Gw4-Ek-VXN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CQs-nd-Jrm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1425" y="986.61971830985919"/>
+        </scene>
+        <!--Bio View Controller-->
+        <scene sceneID="Js2-nn-yEj">
+            <objects>
+                <viewController id="ndB-ZB-KMX" customClass="BioViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6py-fT-lI3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="c3S-ku-SC3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KJA-4R-VYS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BaI-yE-1uO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2273" y="987"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="m8S-Eo-NnR">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Nbe-cU-y7x" customClass="TabBarViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b2A-B6-wVO">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="m2T-5C-WKp" kind="relationship" relationship="viewControllers" id="WFK-oW-fM5"/>
+                        <segue destination="9xF-GN-xaJ" kind="relationship" relationship="viewControllers" id="N3e-X8-xAW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dok-GQ-2aQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="185"/>
+        </scene>
+        <!--User-->
+        <scene sceneID="nNt-lZ-YAL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9xF-GN-xaJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="User" image="person.fill" catalog="system" id="fGu-K4-zmK"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="vFI-HW-adS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="32v-5z-a7n" kind="relationship" relationship="rootViewController" id="PqY-NC-iUa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m90-pK-kUM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="427.5" y="986.61971830985919"/>
         </scene>
     </scenes>
     <resources>
+        <image name="iphone.homebutton.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
