@@ -8,11 +8,14 @@
 import UIKit
 
 class BioViewController: UIViewController {
-
+    @IBOutlet var fullBioPerson: UILabel!
+    
+    private let poi = Person.createPerson()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        fullBioPerson.text = poi.textAboutPerson
     }
 
 }

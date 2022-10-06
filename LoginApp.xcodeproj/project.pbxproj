@@ -16,7 +16,7 @@
 		5237F81728E8CB550053E7CA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5237F81628E8CB550053E7CA /* WelcomeViewController.swift */; };
 		52F416F128EDEBA300E866B7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F416F028EDEBA300E866B7 /* User.swift */; };
 		52F416F328EDFF0F00E866B7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F416F228EDFF0F00E866B7 /* TabBarViewController.swift */; };
-		52F416F528EDFFF300E866B7 /* UserDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F416F428EDFFF300E866B7 /* UserDataVC.swift */; };
+		52F416F528EDFFF300E866B7 /* UserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F416F428EDFFF300E866B7 /* UserDataViewController.swift */; };
 		52F416F728EE08CF00E866B7 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F416F628EE08CF00E866B7 /* BioViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +32,7 @@
 		5237F81628E8CB550053E7CA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		52F416F028EDEBA300E866B7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		52F416F228EDFF0F00E866B7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		52F416F428EDFFF300E866B7 /* UserDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataVC.swift; sourceTree = "<group>"; };
+		52F416F428EDFFF300E866B7 /* UserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewController.swift; sourceTree = "<group>"; };
 		52F416F628EE08CF00E866B7 /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,7 +91,7 @@
 				5237F80628E8CA390053E7CA /* LoginViewController.swift */,
 				5237F81628E8CB550053E7CA /* WelcomeViewController.swift */,
 				52F416F228EDFF0F00E866B7 /* TabBarViewController.swift */,
-				52F416F428EDFFF300E866B7 /* UserDataVC.swift */,
+				52F416F428EDFFF300E866B7 /* UserDataViewController.swift */,
 				52F416F628EE08CF00E866B7 /* BioViewController.swift */,
 			);
 			path = ViewControllers;
@@ -191,7 +191,7 @@
 				52F416F728EE08CF00E866B7 /* BioViewController.swift in Sources */,
 				52F416F128EDEBA300E866B7 /* User.swift in Sources */,
 				52F416F328EDFF0F00E866B7 /* TabBarViewController.swift in Sources */,
-				52F416F528EDFFF300E866B7 /* UserDataVC.swift in Sources */,
+				52F416F528EDFFF300E866B7 /* UserDataViewController.swift in Sources */,
 				5237F80528E8CA390053E7CA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

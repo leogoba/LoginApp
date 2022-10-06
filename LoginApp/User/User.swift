@@ -16,11 +16,22 @@ struct User {
 }
 
 struct Person {
-    let firstname: String
-    let secondname: String
+    let firstName: String
+    let lastName: String
+    let company: String
+    let department: String
+    let function: String
+    let textAboutPerson: String
     
     static func createPerson() -> Person {
-        Person(firstname: "Tim", secondname: "Cook")
+        Person(
+            firstName: "Tim",
+            lastName: "Cook",
+            company: "Apple",
+            department: "Management",
+            function: "CEO",
+            textAboutPerson: "Биография включает в себя не только основные факты жизни, такие как рождение, происхождение, образование, служба, работа, семейные отношения и смерть; она также изображает опыт человека во время событий его жизни. В отличие от профиля или автобиографии (резюме), биография представляет историю жизни субъекта, выделяя различные аспекты его жизни, в том числе интимных подробностей, и может включать в себя анализ личности субъекта."
+        )
     }
 }
 
