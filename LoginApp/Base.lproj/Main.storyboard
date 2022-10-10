@@ -132,7 +132,7 @@
                     <tabBarItem key="tabBarItem" title="Home" image="iphone.homebutton.circle.fill" catalog="system" id="KdV-xl-CIG"/>
                     <navigationItem key="navigationItem" id="FtY-ZG-RZS"/>
                     <connections>
-                        <outlet property="userNameLabel" destination="tXi-Ad-xbN" id="xX5-9P-mNN"/>
+                        <outlet property="welcomeNameLabel" destination="tXi-Ad-xbN" id="xX5-9P-mNN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pwm-0z-fnN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -168,7 +168,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TH2-HQ-5Jx">
-                                <rect key="frame" x="16" y="122.5" width="94" height="134.5"/>
+                                <rect key="frame" x="16" y="249" width="94" height="134.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gz6-pf-y8y">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="20.5"/>
@@ -202,12 +202,21 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zVt-ig-3tk">
+                                <rect key="frame" x="113" y="122.5" width="94" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zVt-ig-3tk" secondAttribute="height" multiplier="47:46" id="brp-CQ-Y7q"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iSa-mc-SdI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zVt-ig-3tk" firstAttribute="width" secondItem="mxn-ms-5Xv" secondAttribute="height" multiplier="47:284" id="2t1-cA-YHt"/>
+                            <constraint firstItem="zVt-ig-3tk" firstAttribute="top" secondItem="iSa-mc-SdI" secondAttribute="top" constant="30" id="4mU-lt-KdZ"/>
                             <constraint firstItem="TH2-HQ-5Jx" firstAttribute="leading" secondItem="iSa-mc-SdI" secondAttribute="leading" constant="16" id="DfU-1d-QSW"/>
-                            <constraint firstItem="TH2-HQ-5Jx" firstAttribute="top" secondItem="iSa-mc-SdI" secondAttribute="top" constant="30" id="qRp-lJ-uhz"/>
+                            <constraint firstItem="zVt-ig-3tk" firstAttribute="centerX" secondItem="mxn-ms-5Xv" secondAttribute="centerX" id="mCE-eJ-0PI"/>
+                            <constraint firstItem="TH2-HQ-5Jx" firstAttribute="top" secondItem="iSa-mc-SdI" secondAttribute="top" constant="156.5" id="qRp-lJ-uhz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xXW-QB-q86">
@@ -223,6 +232,7 @@
                         <outlet property="firstNamePerson" destination="gz6-pf-y8y" id="f7p-qF-1FV"/>
                         <outlet property="functionPerson" destination="CxK-cD-cbf" id="1St-8f-brz"/>
                         <outlet property="lastNamePerson" destination="7Xg-tT-vtL" id="cPT-3E-Kss"/>
+                        <outlet property="photoImage" destination="mxn-ms-5Xv" id="Fpp-vx-QMK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yxs-GX-Cw8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -237,24 +247,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DiA-al-tOh">
-                                <rect key="frame" x="16" y="100" width="288" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3zV-18-H3B">
+                                <rect key="frame" x="16" y="92.5" width="288" height="396.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PAe-2g-8TK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="DiA-al-tOh" firstAttribute="leading" secondItem="PAe-2g-8TK" secondAttribute="leading" constant="16" id="0Yh-x7-chz"/>
-                            <constraint firstItem="DiA-al-tOh" firstAttribute="top" secondItem="uf6-zj-mhm" secondAttribute="top" constant="100" id="Gqe-Qu-yaw"/>
-                            <constraint firstItem="PAe-2g-8TK" firstAttribute="trailing" secondItem="DiA-al-tOh" secondAttribute="trailing" constant="16" id="sST-Cy-2UX"/>
+                            <constraint firstItem="PAe-2g-8TK" firstAttribute="bottom" secondItem="3zV-18-H3B" secondAttribute="bottom" constant="30" id="BsE-wq-FaD"/>
+                            <constraint firstItem="PAe-2g-8TK" firstAttribute="trailing" secondItem="3zV-18-H3B" secondAttribute="trailing" constant="16" id="Eq7-10-Mab"/>
+                            <constraint firstItem="3zV-18-H3B" firstAttribute="leading" secondItem="PAe-2g-8TK" secondAttribute="leading" constant="16" id="KSK-Op-ot1"/>
+                            <constraint firstItem="3zV-18-H3B" firstAttribute="top" secondItem="PAe-2g-8TK" secondAttribute="top" id="hid-cw-JuS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Lph-9Z-oLn"/>
                     <connections>
-                        <outlet property="fullBioPerson" destination="DiA-al-tOh" id="lC2-zH-I3g"/>
+                        <outlet property="userBioTextView" destination="3zV-18-H3B" id="B5I-Kz-bqK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="URG-KB-dbe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -268,7 +281,7 @@
                     <tabBarItem key="tabBarItem" title="User" image="person.fill" catalog="system" id="Zof-TC-D0w"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="BjQ-t2-WPY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -284,6 +297,9 @@
     <resources>
         <image name="iphone.homebutton.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

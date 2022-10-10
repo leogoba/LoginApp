@@ -14,14 +14,26 @@ class LoginViewController: UIViewController {
     private let userData = User.createUser()
     
     override func viewDidLoad() {
-        userNameTF.text = userData.userName
+        super.viewDidLoad()
+        userNameTF.text = userData.login
         passwordTF.text = userData.password
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.username = userData.userName
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
         
+        viewControllers.forEach {
+            if let welcomeVC = $0 as? WelcomeViewController {
+                welcomeVC.user = userData
+            } else if let navigationVC = $0 as? UINavigationController {
+                let userDataVC = navigationVC.topViewController
+                guard let userDataVC = userDataVC as? UserDataViewController else {
+                    return
+                }
+                userDataVC.user = userData
+            }
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -30,7 +42,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func buttonLoginTapped() {
-        guard userNameTF.text == userData.userName, passwordTF.text == userData.password else {
+        guard userNameTF.text == userData.login,
+                passwordTF.text == userData.password else {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please enter correct login or password",
@@ -49,7 +62,7 @@ class LoginViewController: UIViewController {
     @IBAction func forgotUserNameButton() {
         showAlert(
             title: "Oops!",
-            message: "Your name is \(userData.userName)😉"
+            message: "Your name is \(userData.login)😉"
         )
     }
     

@@ -9,6 +9,11 @@ import UIKit
 
 class UserDataViewController: UIViewController {
     
+    @IBOutlet var photoImage: UIImageView! {
+        didSet {
+            photoImage.layer.cornerRadius = photoImage.frame.height / 2
+        }
+    }
     
     @IBOutlet var firstNamePerson: UILabel!
     @IBOutlet var lastNamePerson: UILabel!
@@ -16,27 +21,32 @@ class UserDataViewController: UIViewController {
     @IBOutlet var departmentPerson: UILabel!
     @IBOutlet var functionPerson: UILabel!
     
-    private let createdPerson = Person.createPerson()
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = createdPerson.firstName + " " + createdPerson.lastName
+        view.addVerticalGradientLayer()
+        photoImage.image = UIImage(named: user.person.photo)
+        title = user.person.fullName
         
-//        if let firstName = firstNamePerson.text {
-//            firstNamePerson.text = firstName + " " + qwe.firstName
-//        }
-        firstNamePerson.text = "Имя: \(createdPerson.firstName)"
+        firstNamePerson.text = "Имя: \(user.person.firstName)"
+        
         if let lastName = lastNamePerson.text {
-            lastNamePerson.text = lastName + " " + createdPerson.lastName
+            lastNamePerson.text = lastName + " " + user.person.lastName
         }
         if let companyName = companyPerson.text {
-            companyPerson.text = companyName + " " + createdPerson.company
+            companyPerson.text = companyName + " " + user.person.job.title
         }
         if let departmentName = departmentPerson.text {
-            departmentPerson.text = departmentName + " " + createdPerson.department
+            departmentPerson.text = departmentName + " " + user.person.job.jobTitle.rawValue
         }
         if let functionName = functionPerson.text {
-            functionPerson.text = functionName + " " + createdPerson.function
+            functionPerson.text = functionName + " " + user.person.job.department.rawValue
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let imageVC = segue.destination as? BioViewController else { return }
+        imageVC.user = user
     }
 }

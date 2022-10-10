@@ -8,14 +8,17 @@
 import UIKit
 
 class BioViewController: UIViewController {
-    @IBOutlet var fullBioPerson: UILabel!
     
-    private let poi = Person.createPerson()
+    @IBOutlet var userBioTextView: UITextView!
+    
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        fullBioPerson.text = poi.textAboutPerson
+        view.addVerticalGradientLayer()
+        title = "\(user.person.fullName) Bio"
+        userBioTextView.backgroundColor = .clear
+        userBioTextView.textColor = .white
+        userBioTextView.text = user.person.bio
     }
-
 }
