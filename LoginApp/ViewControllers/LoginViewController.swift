@@ -27,11 +27,11 @@ class LoginViewController: UIViewController {
             if let welcomeVC = $0 as? WelcomeViewController {
                 welcomeVC.user = userData
             } else if let navigationVC = $0 as? UINavigationController {
-                let userDataVC = navigationVC.topViewController
-                guard let userDataVC = userDataVC as? UserDataViewController else {
+                let userInfoVC = navigationVC.topViewController
+                guard let userInfoVC = userInfoVC as? UserDataViewController else {
                     return
                 }
-                userDataVC.user = userData
+                userInfoVC.user = userData
             }
         }
     }

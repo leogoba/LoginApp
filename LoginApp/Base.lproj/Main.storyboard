@@ -232,7 +232,7 @@
                         <outlet property="firstNamePerson" destination="gz6-pf-y8y" id="f7p-qF-1FV"/>
                         <outlet property="functionPerson" destination="CxK-cD-cbf" id="1St-8f-brz"/>
                         <outlet property="lastNamePerson" destination="7Xg-tT-vtL" id="cPT-3E-Kss"/>
-                        <outlet property="photoImage" destination="mxn-ms-5Xv" id="Fpp-vx-QMK"/>
+                        <outlet property="photoImage" destination="zVt-ig-3tk" id="4ES-Eu-Alz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yxs-GX-Cw8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
